@@ -21,6 +21,7 @@ This endpoint will be able to provide the following:
 ### Number of Restaurant Visitors
 
 **Endpoint**: `/restaurant/:name/visitor_count`
+
 **Parameter**:
   - name -> Type: String, the name of the restaurant
 
@@ -42,6 +43,7 @@ curl "localhost:4000/api/restaurant/the-restaurant-at-the-end-of-the-universe/vi
 ### Amount of Profit
 
 **Endpoint**: `/restaurant/:name/profit`
+
 **Parameter**:
   - name -> Type: String, the name of the restaurant
 
@@ -72,6 +74,7 @@ This endpoint will be able to provide the following:
 ### Most Popular Dish
 
 **Endpoint**: `/restaurants/dish/:type`
+
 **Parameter**:
   - type -> Type: String, accepted values are ["popular", "profitable"]
 
@@ -108,6 +111,7 @@ curl "localhost:4000/api/restaurants/dish/popular"
 ### Most Profitable Dish
 
 **Endpoint**: `/restaurants/dish/:type`
+
 **Parameter**:
   - type -> Type: String, accepted values are ["popular", "profitable"]
 
@@ -144,6 +148,7 @@ curl "localhost:4000/api/restaurants/dish/profitable"
 ### Most Frequent Customer
 
 **Endpoint**: `/restaurants/customer/:type`
+
 **Parameter**:
   - type -> Type: String, accepted values are ["most_frequent"]
 
@@ -187,6 +192,7 @@ This endpoint will be able to provide the following:
 ### Visited the Most
 
 **Endpoint**: `/customer/:type`
+
 **Parameter**:
   - type -> Type: String, accepted values are ["most_visited"]
 
