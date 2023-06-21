@@ -2,11 +2,11 @@ import Config
 
 # Configure your database
 config :test_proj, TestProj.Repo,
-  username: "ding",
-  password: "dingsql",
+  username: "root",
+  password: "",
   hostname: "127.0.0.1",
-  database: "test_proj_dev",
-  port: 3369,
+  database: "dbname",
+  port: 3306,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -20,7 +20,7 @@ config :test_proj, TestProj.Repo,
 config :test_proj, TestProjWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,

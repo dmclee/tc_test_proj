@@ -8,10 +8,20 @@ This service uses the following:
 - Elixir 1.14
 - Erlang/OTP 24
 
+## Populating the database
+
+To pre-populate the database, prepare a CSV file with the data and add it to `/priv/repo/data/data.csv`. This will be processed during the setup phase using `mix setup`.
+
+## Starting Using Docker
+
+To run the project using Docker, simply run the command `docker compose up`. Once everything is running, you will be able to reach 
+[`localhost:4000`](http://localhost:4000).
+
+## Starting Manually
+
 To start your Phoenix server:
 
   * Update `config/dev.exs` with the database credentials
-  * To pre-populate the database, prepare a CSV file with the data and add it to `/priv/repo/data/data.csv`. 
   * Run `mix setup` to install and setup dependencies, and also to populate the database with the data. Please note that the setup will only ingest the data if the table is empty.
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
@@ -41,4 +51,6 @@ In the parts that gets the summary of data for each restaurant, I would probably
 
 *How would you improve the deployment of this system?*
 
-I would add tests and error handling in the code. Also, if possible, maybe try to add it to a docker container.
+I would add tests and error handling in the code.
+
+I would also take more time to improve on the deployment of the code with docker. Some improvements are 1) creating a user for the application to access the db, 2) using `.env` files to store values for variables, and 3) deploy a phoenix release instead of just running it using `mix phx.server`.

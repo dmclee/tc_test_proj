@@ -1,0 +1,32 @@
+services:
+   phoenix: # Container for the Phoenix App
+      build:
+         context: .
+      environment: # MySQL Credentials
+         SQL_USER: root
+         SQL_PASSWORD: samplepassword
+         SQL_DATABASE: test_proj_dev
+         SQL_PORT: 3306
+         SQL_HOST: mysql-db
+      ports:
+         - '4000:4000'
+      depends_on:
+         mysql-db:
+            condition: service_healthy # Make sure db is up and running before starting the app
+
+   mysql-db:  # Container for the database
+      image: mysql:latest
+      environment:
+         MYSQL_ROOT_PASSWORD: samplepassword
+      ports:
+         - '3306:3306'
+      restart: always
+      volumes:
+         - api-mysql-data:/var/lib/mysql
+      healthcheck:
+         test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+         timeout: 5s
+         retries: 10
+
+volumes:
+  api-mysql-data:

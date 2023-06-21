@@ -1,5 +1,15 @@
 import Config
 
+config :test_proj, TestProj.Repo,
+  username: System.get_env("SQL_USER"),
+  password: System.get_env("SQL_PASSWORD"),
+  hostname: System.get_env("SQL_HOST"),
+  database: System.get_env("SQL_DATABASE"),
+  port: System.get_env("SQL_PORT"),
+  stacktrace: true,
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
+
 # config/runtime.exs is executed for all environments, including
 # during releases. It is executed after compilation and before the
 # system starts, so it is typically used to load production configuration
