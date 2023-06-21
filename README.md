@@ -11,7 +11,8 @@ This service uses the following:
 To start your Phoenix server:
 
   * Update `config/dev.exs` with the database credentials
-  * Run `mix setup` to install and setup dependencies
+  * To pre-populate the database, prepare a CSV file with the data and add it to `/priv/repo/data/data.csv`. 
+  * Run `mix setup` to install and setup dependencies, and also to populate the database with the data. Please note that the setup will only ingest the data if the table is empty.
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.

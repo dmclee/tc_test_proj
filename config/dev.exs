@@ -2,11 +2,11 @@ import Config
 
 # Configure your database
 config :test_proj, TestProj.Repo,
-  username: "root",
-  password: "",
-  hostname: "localhost",
-  database: "dbname",
-  port: 3306,
+  username: "ding",
+  password: "dingsql",
+  hostname: "127.0.0.1",
+  database: "test_proj_dev",
+  port: 3369,
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10

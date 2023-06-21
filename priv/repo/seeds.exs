@@ -9,3 +9,5 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+TestProj.CustomerLogs.CSVUtil.import_data("priv/repo/data/data.csv")

@@ -9,7 +9,7 @@ defmodule TestProj.CustomerLogs.CustomerLog do
     field :food_names, :string
     field :restaurant_names, :string
 
-    timestamps()
+    timestamps(type: :utc_datetime)
   end
 
   @doc false
